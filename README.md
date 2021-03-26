@@ -31,3 +31,8 @@
 ![avatar](https://github.com/u2mycat/fileshare/blob/main/src/login.jpg)
 ![avatar](https://github.com/u2mycat/fileshare/blob/main/src/p-1.jpg)
 ![avatar](https://github.com/u2mycat/fileshare/blob/main/src/p-2.jpg)
+
+### 相关引用
+[codemirror](https://codemirror.net/)
+[spark-md5.js](https://github.com/satazor/js-spark-md5/blob/master/spark-md5.js)
+[base64.js](https://github.com/dankogai/js-base64)
