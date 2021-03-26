@@ -22,12 +22,12 @@
 
 > 浏览器中打开地址 127.0.0.1:8080
 
-![avatar](https://github.com/u2mycat/fileshare/blob/master/src/login.png)
-![avatar](https://github.com/u2mycat/fileshare/blob/master/src/p-1.png)
-![avatar](https://github.com/u2mycat/fileshare/blob/master/src/p-2.png)
+![avatar](https://github.com/u2mycat/fileshare/blob/main/src/login.png)
+![avatar](https://github.com/u2mycat/fileshare/blob/main/src/p-1.png)
+![avatar](https://github.com/u2mycat/fileshare/blob/main/src/p-2.png)
 
 > 手机端浏览器中打开服务端地址或扫二维码
 > 
-![avatar](https://github.com/u2mycat/fileshare/blob/master/src/login.jpg)
-![avatar](https://github.com/u2mycat/fileshare/blob/master/src/p-1.jpg)
-![avatar](https://github.com/u2mycat/fileshare/blob/master/src/p-2.jpg)
+![avatar](https://github.com/u2mycat/fileshare/blob/main/src/login.jpg)
+![avatar](https://github.com/u2mycat/fileshare/blob/main/src/p-1.jpg)
+![avatar](https://github.com/u2mycat/fileshare/blob/main/src/p-2.jpg)
