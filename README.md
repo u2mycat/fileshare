@@ -14,13 +14,26 @@
 
 ### 使用说明
 
-> 运行工具
-
-    # 默认使用 0.0.0.0:8080 地址
     # python run.py
 
 
 > 浏览器中打开地址 127.0.0.1:8080
+
+> 默认用户及口令: admin / ADMIN!@#
+
+> 修改默认登录验证打开run.py，搜索`ADMIN!@#`修改即可
+
+> 修改端口，打开run.py，查看最后几行，修改`port = 8080`即可
+
+```python
+if __name__ == "__main__":
+    ip = get_my_ip()
+    port = 8080
+    ip_list = {}
+    ip_list[ip] = qcode(ip, port)
+    app.run(port=port)
+```
+
 
 ![avatar](https://github.com/u2mycat/fileshare/blob/main/src/login.png)
 ![avatar](https://github.com/u2mycat/fileshare/blob/main/src/p-1.png)
