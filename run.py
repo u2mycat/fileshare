@@ -102,8 +102,8 @@ def get_my_ip():
         return "127.0.0.1"
 
 
-def qcode(ip):
-    url = f'http://{ip}:8088/file'
+def qcode(ip,port):
+    url = f'http://{ip}:{port}/file'
     qr = qrcode.QRCode(
         version=5, error_correction=qrcode.constants.ERROR_CORRECT_H, box_size=8, border=4)
     qr.add_data(url)
@@ -305,6 +305,7 @@ class Msg:
 
 if __name__ == "__main__":
     ip = get_my_ip()
+    port = 8080
     ip_list = {}
-    ip_list[ip] = qcode(ip)
-    app.run(port=8080)
+    ip_list[ip] = qcode(ip, port)
+    app.run(port=port)
