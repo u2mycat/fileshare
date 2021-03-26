@@ -1,0 +1,33 @@
+$def with (agent)
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" /> 
+    $if agent == 'desktop':
+        <link rel="stylesheet" href="static/css/style.css">
+    $elif agent == 'mobile':
+        <link rel="stylesheet" href="static/css/style-mobile.css">
+
+    <title>登录</title>
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="login-wrapper">
+            <div class="logo">局域网文件共享</div>
+            <div class="title"></div>
+            <form action="/login" method="POST">
+                <div class="input-wrapper">
+                    <input type="text" name="user" placeholder="用户名" class="input-item">
+                    <input type="password" name="passwd" placeholder="密码" class="input-item">
+                </div>
+                <input type="submit" class="login-btn" value="登录">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

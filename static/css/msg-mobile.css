@@ -1,0 +1,210 @@
+*::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 4px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    /*border-radius: 2px;*/
+    background: #607d8b81;
+}
+
+*::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 2px;
+    background-color: #00968800;
+
+}
+.msg-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.hide {
+    display: none;
+}
+
+
+
+.msg-wrapper-s {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*
+    box-shadow: 0 0 5px #607d8b;
+    border-radius: 10px;*/
+}
+
+
+.msg-title {
+    width: 100%;
+    height: 40px;
+    /*border-radius: 10px 10px 0 0;*/
+    background-color: #607d8b;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+}
+
+.msg-title div {
+    width: 50%;
+}
+
+.msg-title .tt span {
+    margin-left: 20px;
+}
+
+.msg-title .close {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 10px;
+}
+
+.msg-title .close span {
+    cursor: pointer;
+    padding: 10px;
+}
+
+#msg-count {
+    color: #fff;
+}
+.output{
+    height: calc(100% - 200px);
+}
+.input{
+    height: 100px;
+    z-index: 99;
+}
+.output,
+.input {
+    width: 100%;
+    font-size: 14px;
+}
+
+* .CodeMirror {
+    padding: 10px;
+    /*border: 1px solid #eee;*/
+    font-family: 'Anonymous Pro', 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
+}
+
+.output .CodeMirror {
+    height: 100%;
+    border-bottom: 1px solid #eee;
+    /*
+    border-left: 1px solid #607d8b;
+    border-right: 1px solid #607d8b;
+    */
+}
+
+.input .CodeMirror {
+    height: 100%;
+    background-color: #F5F5F5;
+     /*
+    border-top: 1px solid #eee;
+   
+    border-left: 1px solid #607d8b;
+    border-right: 1px solid #607d8b;
+    */
+}
+
+.sub {
+    text-align: right;
+    /*
+    border-radius: 0 0 10px 10px;
+    border-bottom: 1px solid #607d8b;
+    border-left: 1px solid #607d8b;
+    border-right: 1px solid #607d8b;
+    */
+    background-color: #eee;
+    height: 40px;
+}
+
+.sub span {
+    color: #607D8B;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+#status {
+    position: absolute;
+    padding-left: 15px;
+    line-height: 40px;
+}
+
+
+.ok {
+    color: #4caf50 !important;
+}
+
+.fail {
+    color: orangered !important;
+}
+
+.msg-wrapper input[type="submit"],#submit {
+    outline: none;
+    width: 60px;
+    height: 40px;
+    padding: 5px 15px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    font-weight: bold;
+    color: #607d8b;
+    background-color: #cfd8dc;
+    cursor: pointer;
+    display: inline;
+
+}
+
+.msg-wrapper input[type="submit"]:hover {
+    color: #fff;
+    background-color: #90a4ae;
+}
+
+
+.cm-log {
+    color: #607d8b !important;
+    background-color: #cfd8dc !important;
+    padding: 1px;
+}
+
+#msg-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #607d8b;
+    font-size: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 0px #607d8b;
+}
+
+.msg-count {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: #fff;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 10px;
+}

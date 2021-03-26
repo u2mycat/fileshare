@@ -1,0 +1,82 @@
+$def with (res,agent, ip_list)
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" /> 
+    <link rel="stylesheet" href="../static/plugins/codemirror/lib/codemirror.css">
+    $if agent == 'desktop':
+        <link rel="stylesheet" href="static/css/msg.css">
+        <link rel="stylesheet" href="static/css/file.css">
+    $elif agent == 'mobile':
+        <link rel="stylesheet" href="static/css/msg-mobile.css">
+        <link rel="stylesheet" href="static/css/file-mobile.css">
+
+    <title>局域网文件共享</title>
+</head>
+
+<body>
+    <div id="confirm-wrapper">
+    </div>
+    <div class="banner">
+        <span>局域网文件共享</span>
+        <a href="/logout">退出</a>
+    </div>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" id="file" name="myfile">
+        <input type="text" id="md5" name="md5" style="display: none;"><input type="button" onclick="uploadFile()" value="上传">
+    </form>
+    <div class="file-msg" id="fileName"></div>
+    <div class="file-msg" id="fileSize"></div>
+    <div class="file-msg" id="fileType"></div>
+    <div class="file-msg" id="md5-str"></div>
+    <div class="progress-wrapper" id="progress-wrapper"><div id="progress"></div><span class="progress-msg" id="progressNumber"></span></div>
+
+    <div id="result" class="result-wrapper">
+        <div class="file-msg ok" id="filename-res"></div>
+        <div class="file-msg ok" id="md5-res"></div>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+    $for k,v in res.items():
+        <p><a href="javascript:;" onclick="deleteFile(this);" file="$v" short-name="$k">删除 </a> | <a href="/download?file=$v" target="_Blank">$k</a></p>
+    </div>
+
+    <div id="msg-btn"><span id="msg-count" class="msg-count">1</span><span>消息</span></div>
+    <div id="msg-wrapper" status="hide" class="msg-wrapper hide">
+        <div class="msg-wrapper-s">
+            <div class="msg-title">
+                <div class="tt"><span>消息</span></div>
+                <div class="close"><span id="close">关闭</span></div>
+            </div>
+            <div class="output">
+                <textarea id="log"></textarea>
+            </div>
+            <div class="input">
+                <textarea id="strings" name="strings"></textarea>
+                $if agent == 'desktop':
+                    <div class="sub"><div id="status"></div><span>Alt+Enter 发送</span><input id="submit" type="submit" value="发送"></div>
+                $elif agent == 'mobile':
+                    <div class="sub"><div id="status"></div><input id="submit" type="submit" value="发送"></div>
+                </div>
+        </div>
+    </div>
+    $if agent == 'desktop':
+        <div class="qrcode-wrapper">
+            $for _,v in ip_list.items():
+                <div class="qcode">
+                    <img src="$v">
+                    <span>移动端访问</span>
+                </div>
+        </div>
+
+</body>
+<script type="text/javascript" src="static/js/hi.js"></script>
+<script type="text/javascript" src="static/plugins/spark-md5.js"></script>
+<script src="static/plugins/codemirror/lib/codemirror.js"></script>
+<script src="static/plugins/codemirror/mode/log/log.js"></script>
+<script type="text/javascript" src="static/js/msg.js"></script>
+<script type="text/javascript" src="static/js/file.js"></script>
+</html>
