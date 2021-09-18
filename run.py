@@ -14,6 +14,7 @@ from pathlib import Path
 web.config.debug = False
 
 urls = (
+    '/','File',
     '/msg', 'Msg',
     '/upload', 'Upload',
     '/file', 'File',
