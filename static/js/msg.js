@@ -1,5 +1,6 @@
 function init(cm, value) {
     let status = true;
+    value = Base64.encode(value)
     fetch("/msg", {
         method: "POST",
         headers: {
