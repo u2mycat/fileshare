@@ -287,6 +287,7 @@ class Msg:
         web.header("Access-Control-Allow-Origin", "*")
         value = web.input()
         strings = value['msg']
+        strings = str(strings).replace(' ','+')
         strings = base64.b64decode(bytes(strings, encoding='utf-8')).decode('utf-8')
 
         if strings == '':
